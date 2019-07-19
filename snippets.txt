@@ -10,7 +10,7 @@ amplify push
 amplify status
 amplify push
 ../app.sh
-''npm
+npm install (...)
 npm run serve
 
 -------- snippets ----------
