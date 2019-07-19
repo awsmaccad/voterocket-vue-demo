@@ -1,0 +1,7 @@
+Components
+
+- Front-end
+- API 
+- Database 
+- Business Logic 
+- Real-time 

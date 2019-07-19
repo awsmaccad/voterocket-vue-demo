@@ -1,0 +1,47 @@
+-------- commands ----------
+npm install -g @vue/cli
+npm install -g @aws-amplify/cli
+vue create voterocket
+cd voterocket
+amplify init
+amplify add api
+amplify push
+../castvote.sh
+amplify status
+amplify push
+../app.sh
+''npm
+npm run serve
+
+-------- snippets ----------
+
+''model
+type Candidate @model {
+  id: ID!
+  name: String!
+  description: String
+  votes: Int!
+}
+
+''list
+query AllCandidates {
+  listCandidates {
+    items {
+      id
+      name
+      description
+      votes
+    }
+  }
+}
+
+''seed
+mutation createCandidates {
+  candidate1: createCandidate(input: {name: "Lambda",      description: "Run code without thinking about servers",  votes: 0 }) {id, name, description, votes }
+  candidate2: createCandidate(input: {name: "DynamoDB",    description: "Fast and flexible NoSQL database service", votes: 0 }) {id, name, description, votes }
+  candidate3: createCandidate(input: {name: "API Gateway", description: "Managed RESTful APIs",                     votes: 0 }) {id, name, description, votes }
+  candidate4: createCandidate(input: {name: "AppSync",     description: "Managed GraphQL APIs",                     votes: 0 }) {id, name, description, votes }
+}
+
+''npm
+npm install aws-amplify aws-amplify-vue chart.js vue-chartjs
